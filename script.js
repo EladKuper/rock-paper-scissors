@@ -1,5 +1,5 @@
 function getComputerChoice() {
-    const playOptions = ['Rock', 'Paper', 'Scissors'];
+    const playOptions = ['rock', 'paper', 'scissors'];
     let random = Math.floor( Math.random() * playOptions.length);
     return playOptions[random];
 }
@@ -7,8 +7,6 @@ function getComputerChoice() {
 function playARound() {
     let input = prompt("Please choose an option between 'Rock', 'Paper', and 'Scissors'", "Rock");
     let playerSelection = input.toLowerCase();
-    console.log(input);
-    console.log(playerSelection);
+    let computerSelection = getComputerChoice();
 }
 
-console.log(playARound());
