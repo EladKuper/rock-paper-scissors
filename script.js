@@ -4,9 +4,10 @@ function getComputerChoice() {
     return playOptions[random];
 }
 
-function playARound() {
+function playRound() {
     let input = prompt("Please choose an option between 'Rock', 'Paper', and 'Scissors'", "Rock");
     let playerSelection = input.toLowerCase();
     let computerSelection = getComputerChoice();
+    
 }
 
