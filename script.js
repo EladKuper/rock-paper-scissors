@@ -53,18 +53,22 @@ function playGame() {
     for (let i = 0; i < 5; i++) {
         let roundResult = playRound();
         console.log(roundResult); 
-        if (roundResult.slice(0, 4) === "You w") {
+        if (roundResult.slice(0, 5) === "You w") {
             playerWins++;
         }
-        else if (roundResult.slice(0, 4) === "You l") {
+        else if (roundResult.slice(0, 5) === "You l") {
             computerWins++;
         }
+        console.log("round "+i+"   player wins: "+playerWins+", computer wins: "+computerWins);
     }
     if (playerWins > computerWins) {
         return "You are the winner!";
     } 
-    else {
+    else if (computerWins > playerWins) {
         return "You are the loser!";
+    }
+    else {
+        return "It's a tie!";
     }
 }
 
