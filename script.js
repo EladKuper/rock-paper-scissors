@@ -27,10 +27,10 @@ function playerWonOrLost(player, computer) {
     else return false;
 }
 
-function playRound(playerSelection, computerSelection) {
+function playRound() {
     let input = prompt("Please choose an option between 'Rock', 'Paper', and 'Scissors'", "Rock");
-    playerSelection = input.toLowerCase();
-    computerSelection = getComputerChoice();
+    let playerSelection = input.toLowerCase();
+    let computerSelection = getComputerChoice();
 
     let playerIsWinner = playerWonOrLost(playerSelection, computerSelection);
     if (playerIsWinner === "won") {
@@ -45,4 +45,27 @@ function playRound(playerSelection, computerSelection) {
     else return "Check your spelling"
 }
 
-console.log(playRound());
+
+
+function playGame() {
+    let playerWins = 0;
+    let computerWins = 0;
+    for (let i = 0; i < 5; i++) {
+        let roundResult = playRound();
+        console.log(roundResult); 
+        if (roundResult.slice(0, 4) === "You w") {
+            playerWins++;
+        }
+        else if (roundResult.slice(0, 4) === "You l") {
+            computerWins++;
+        }
+    }
+    if (playerWins > computerWins) {
+        return "You are the winner!";
+    } 
+    else {
+        return "You are the loser!";
+    }
+}
+
+console.log(playGame());
