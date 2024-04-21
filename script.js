@@ -23,9 +23,9 @@ function playerWonOrLost(player, computer) {
     else return false;
 }
 
-function playRound() {
-    let input = prompt("Please choose an option between 'Rock', 'Paper', and 'Scissors'", "Rock");
-    let playerSelection = input.toLowerCase();
+function playRound(playerSelection) {
+    //let input = prompt("Please choose an option between 'Rock', 'Paper', and 'Scissors'", "Rock");
+    //let playerSelection = input.toLowerCase();
     let computerSelection = getComputerChoice();
 
     let playerIsWinner = playerWonOrLost(playerSelection, computerSelection);
@@ -61,7 +61,14 @@ buttons.addEventListener('click', (event) => {
 
     switch(target.id) {
         case 'rock':
-            
+            playRound('rock');
+            break;
+        case 'paper':
+            playRound('paper');
+            break;
+        case 'scissors':
+            playRound('scissors');
+            break;
     }
 })
 
