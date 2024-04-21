@@ -41,5 +41,16 @@ function playRound() {
     else return "Check your spelling"
 }                                                                               
 
+const container = document.querySelector("#container");
+
+const btnRock = document.createElement('button');
+btnRock.textContent = "Rock";
+container.appendChild(btnRock);
+const btnPaper = document.createElement('button');
+btnPaper.textContent = "Paper";
+container.appendChild(btnPaper);
+const btnScissors = document.createElement('button');
+btnScissors.textContent = "Scissors";
+container.appendChild(btnScissors);
 
 console.log(playRound());
