@@ -44,13 +44,25 @@ function playRound() {
 const buttons = document.querySelector("#buttons");
 
 const btnRock = document.createElement('button');
-btnRock.textContent = "Rock";
-container.appendChild(btnRock);
+btnRock.id = 'rock';
+btnRock.textContent = 'Rock';
+buttons.appendChild(btnRock);
 const btnPaper = document.createElement('button');
-btnPaper.textContent = "Paper";
-container.appendChild(btnPaper);
+btnPaper.id = 'paper';
+btnPaper.textContent = 'Paper';
+buttons.appendChild(btnPaper);
 const btnScissors = document.createElement('button');
-btnScissors.textContent = "Scissors";
-container.appendChild(btnScissors);
+btnScissors.id = 'scissors';
+btnScissors.textContent = 'Scissors';
+buttons.appendChild(btnScissors);
+
+buttons.addEventListener('click', (event) => {
+    let target = event.target;
+
+    switch(target.id) {
+        case 'rock':
+            
+    }
+})
 
 console.log(playRound());
