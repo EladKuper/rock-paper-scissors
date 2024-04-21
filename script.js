@@ -41,7 +41,7 @@ function playRound() {
     else return "Check your spelling"
 }                                                                               
 
-const container = document.querySelector("#container");
+const buttons = document.querySelector("#buttons");
 
 const btnRock = document.createElement('button');
 btnRock.textContent = "Rock";
